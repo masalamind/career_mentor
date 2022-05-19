@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_field %}
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+
+{% block content %}
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Want to create blog posts too? </p>
+                <div class="my-5">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <form method="POST">
+                      {{ form.csrf_token() }}
+                      {{ render_field(form.email, placeholder='enter your email') }}
+                      {{ render_field(form.first_name, placeholder='enter your first name') }}
+                      {{ render_field(form.last_name, placeholder='enter your last name') }}
+                      {{ render_field(form.password, placeholder='create a password') }}
+                      {{ render_field(form.submit, button_size='sm', class="btn-primary") }}
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
