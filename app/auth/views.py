@@ -6,7 +6,7 @@ from flask import render_template, request,redirect,flash,url_for,flash
 from .forms import LoginForm, RegistrationForm
 
 @auth.route('/signup', methods=["GET", "POST"])
-def register():
+def signup():
     
     '''
     Render registration form
