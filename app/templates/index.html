@@ -1,4 +1,8 @@
+{% extends 'base.html'%}
+
+
 {% block styles %}
+
 <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
 <!-- Google fonts-->
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -6,14 +10,19 @@
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 {% endblock %}
 
+
 <!DOCTYPE HTML>
 <!--
 	TXT by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+{% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock %}
 <html>
 	<head>
+	
 		<title>Career-Mentor</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -21,6 +30,8 @@
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
+			
+			
 
 			<!-- Header -->
 				<header id="header">
@@ -32,17 +43,7 @@
 					</div>
 				</header>
 
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="/">Home</a></li>								
-							
-						
-						<li><a href="/mentors">Mentors</a></li>
-						<li><a href="/signup">Signup</a></li>
-						<li><a href="/login">Login</a></li>
-					</ul>
-				</nav>
+			
 
 			<!-- Banner -->
 				<section id="banner">
