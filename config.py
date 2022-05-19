@@ -1,5 +1,8 @@
 class Config:
-    pass
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:Access@localhost/career_mentor'
+    SECRET_KEY='QWERTY1234'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
 
 class ProdConfig(Config):
     pass
