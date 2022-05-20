@@ -57,7 +57,7 @@ def login():
             if get_user and User.verify_password(get_user, password):
                 login_user(get_user)
                 flash("Successfully logged in",category="primary")
-                return redirect(request.args.get('next') or url_for('main.index'))
+                return redirect(url_for('main.mentors'))
             else:
                 flash("Wrong details")
         else:
